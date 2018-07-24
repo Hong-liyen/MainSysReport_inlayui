@@ -15,6 +15,88 @@
 
 <body>
     <form class="layui-form reportSearch">
+        <div class="webnews_edit">
+            <form class="layui-form">
+                <blockquote class="layui-elem-quote">
+                    <form class="layui-form">
+                        <div class="layui-block">
+                            <div class="layui-inline">
+                                <a href="#" class="layui-btn layui-btn-normal">在线存款编辑</a>
+                            </div>
+                            <div class="layui-inline">
+                                <a href="#" class="layui-btn layui-btn-normal">手机支付排序</a>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">按钮角标：</label>
+                                <input type="radio" name="displaycheck" value="无" title="无" checked>
+                                <input type="radio" name="displaycheck" value="快" title="快">
+                                <input type="radio" name="displaycheck" value="安" title="安">
+                                <input type="radio" name="displaycheck" value="稳" title="稳">
+                                <input type="radio" name="displaycheck" value="热" title="热">
+                                <input type="radio" name="displaycheck" value="火" title="火">
+                                <input type="radio" name="displaycheck" value="大" title="大">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <a class="layui-btn layui-btn-normal" method="offset" onclick="payPlatform()">新增自定义支付</a>
+                        </div>
+
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" placeholder="请输入关键字">
+                        </div>
+                        <div class="layui-inline">
+                            <a class="layui-btn layui-btn-normal">查询</a>
+                        </div>
+                    </form>
+                </blockquote>
+                <div class="layui-form">
+                    <table class="layui-table" lay-even="" lay-skin="nob">
+                        <colgroup>
+                            <col width="250">
+                            <col width="200">
+                            <col width="250">
+                            <col width="250">
+                            <col width="250">
+                            <col width="250">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>充值名称</th>
+                                <th>充值类型</th>
+                                <th>线上/线下</th>
+                                <th>排序</th>
+                                <th>图标 </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="layui-inline name">
+                                        <input type="text" class="layui-input" placeholder="微信APP" value="微信APP">
+                                    </div>
+                                </td>
+                                <td>微信APP</td>
+                                <td>线上</td>
+                                <td>
+                                    <div class="layui-inline sort">
+                                        <input type="text" class="layui-input" placeholder="2" value="2">
+                                    </div>
+                                </td>
+                                <td>
+                                    <img src="../images/icon_gf.png" alt="" srcset="">
+                                </td>
+                                <td>
+                                    <a class="layui-btn layui-btn-xs layui-btn-normal orange" method="offset" onclick="payPlatform()">编辑</a>
+                                    <a class="layui-btn layui-btn-xs layui-btn-normal green" method="offset" onclick="del()">删除</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
         <blockquote class="layui-elem-quote quoteBox">
             <form class="layui-form">
                 <div class="layui-block">
@@ -235,88 +317,7 @@
                 </div>
             </form>
         </blockquote>
-        <div class="webnews_edit">
-            <form class="layui-form">
-                <blockquote class="layui-elem-quote">
-                    <form class="layui-form">
-                        <div class="layui-block">
-                            <div class="layui-inline">
-                                <a href="#" class="layui-btn layui-btn-normal">在线存款编辑</a>
-                            </div>
-                            <div class="layui-inline">
-                                <a href="#" class="layui-btn layui-btn-normal">手机支付排序</a>
-                            </div>
-                            <div class="layui-inline">
-                                <label class="layui-form-label">按钮角标：</label>
-                                <input type="radio" name="displaycheck" value="无" title="无" checked>
-                                <input type="radio" name="displaycheck" value="快" title="快">
-                                <input type="radio" name="displaycheck" value="安" title="安">
-                                <input type="radio" name="displaycheck" value="稳" title="稳">
-                                <input type="radio" name="displaycheck" value="热" title="热">
-                                <input type="radio" name="displaycheck" value="火" title="火">
-                                <input type="radio" name="displaycheck" value="大" title="大">
-                            </div>
-                        </div>
-                        <div class="layui-inline">
-                            <a class="layui-btn layui-btn-normal" method="offset" onclick="payPlatform()">新增自定义支付</a>
-                        </div>
 
-                        <div class="layui-input-inline">
-                            <input type="text" class="layui-input" placeholder="请输入关键字">
-                        </div>
-                        <div class="layui-inline">
-                            <a class="layui-btn layui-btn-normal">查询</a>
-                        </div>
-                    </form>
-                </blockquote>
-                <div class="layui-form">
-                    <table class="layui-table" lay-even="" lay-skin="nob">
-                        <colgroup>
-                            <col width="250">
-                            <col width="200">
-                            <col width="250">
-                            <col width="250">
-                            <col width="250">
-                            <col width="250">
-                            <col>
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>充值名称</th>
-                                <th>充值类型</th>
-                                <th>线上/线下</th>
-                                <th>排序</th>
-                                <th>图标 </th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="layui-inline name">
-                                        <input type="text" class="layui-input" placeholder="微信APP" value="微信APP">
-                                    </div>
-                                </td>
-                                <td>微信APP</td>
-                                <td>线上</td>
-                                <td>
-                                    <div class="layui-inline sort">
-                                        <input type="text" class="layui-input" placeholder="2" value="2">
-                                    </div>
-                                </td>
-                                <td>
-                                    <img src="../images/icon_gf.png" alt="" srcset="">
-                                </td>
-                                <td>
-                                    <a class="layui-btn layui-btn-xs layui-btn-normal orange" method="offset" onclick="payPlatform()">编辑</a>
-                                    <a class="layui-btn layui-btn-xs layui-btn-normal green" method="offset" onclick="del()">删除</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </form>
-        </div>
         <div class="contentbox alertboxout alert_loading">
             <div class="alertbox">
                 <div class="alertimg">
@@ -424,8 +425,20 @@
 
         <script src="../../layui/layui.js"></script>
         <script src="reportList.js"></script>
-        <!-- ▼ 日期弹窗 ▼ -->
         <script>
+            // 设定币别 
+            function payPlatform() {
+                layer.open({
+                    type: 1,
+                    closeBtn: 1,
+                    btn: ['保存', '取消'],
+                    btnAlign: 'c',
+                    shade: 0.5,
+                    title: '自定义支付',
+                    area: ['700px', '550px'],
+                    content: '<iframe src="../../page/webnews_edit_Pop.html" width="100%" height="90%"></iframe>'
+                });
+            }
             //日期彈窗
             layui.use('laydate', function() {
                 var laydate = layui.laydate;
@@ -470,19 +483,6 @@
                     $(".outboxout").toggle();
                 });
             });
-            // 设定币别 function 
-            payPlatform() {
-                layer.open({
-                    type: 1,
-                    closeBtn: 1,
-                    btn: ['保存', '取消'],
-                    btnAlign: 'c',
-                    shade: 0.5,
-                    title: '自定义支付',
-                    area: ['700px', '550px'],
-                    content: '<iframe src="../../page/webnews_edit_Pop.html" width="100%" height="90%"></iframe>'
-                });
-            }
         </script>
 
 </body>

@@ -28,6 +28,10 @@
     margin-bottom: 0;
 }
 
+.layui-elem-quote {
+    border-left: 0;
+}
+
 blockquote .layui-icon {
     font-size: 28px !important;
     line-height: 1.2;
@@ -265,6 +269,7 @@ iframe {
 
 #outpaybox {
     position: relative;
+    margin-bottom: 15px;
 }
 
 .plantbox {

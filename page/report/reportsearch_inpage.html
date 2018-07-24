@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main system Reports</title>
+    <meta http-equiv="Content-Type" />
+    <meta charset="UTF-8">
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/screen.css" />
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../stylesheets/style.css">
+</head>
+
+<body>
+
+    <form class="layui-form">
+        <div class="outboxout">
+            <div class="layui-inline">
+                <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">全选</a>
+            </div>
+            <div class="layui-inline">
+                <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">彩票类</a>
+            </div>
+            <div class="layui-inline">
+                <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">体育类</a>
+            </div>
+            <div class="layui-inline">
+                <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">电子类</a>
+            </div>
+            <div class="layui-inline">
+                <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">视讯类</a>
+            </div>
+            <div class="layui-inline">
+                <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">棋牌类</a>
+            </div>
+            <div class="layui-inline">
+                <a class="layui-btn layui-btn layui-btn-sm green">
+                    <i class="layui-icon"></i>清空</a>
+            </div>
+            <div class="layui-inline">
+                <a class="layui-btn layui-btn layui-btn-sm orange">
+                    <i class="layui-icon"></i>完成选择</a>
+            </div>
+            <table class="layui-table" lay-even="" lay-skin="nob">
+                <colgroup>
+                    <!-- <col width="250">
+                    <col width="200">
+                    <col width="250">
+                    <col width="250">
+                    <col width="250">
+                    <col width="250">
+                    <col> -->
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>彩票</th>
+                        <th>视讯</th>
+                        <th>电子</th>
+                        <th>体育</th>
+                        <th>棋牌</th>
+                        <th>3D</th>
+                        <th>捕鱼</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="" lay-skin="primary" title="传统彩">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="" lay-skin="primary" title="" checked>
+                        </td>
+                        <td></td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="layui-input-inline checkall">
+                                <input type="checkbox" name="" lay-skin="primary" title="皇冠" checked>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="" lay-skin="primary" title="" checked>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="" lay-skin="primary" title="CMD" checked>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="" lay-skin="primary" title="">
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="" lay-skin="primary" title="沙巴">
+                            </div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="" lay-skin="primary" title="">
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="" lay-skin="primary" title="BBIN">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="" lay-skin="primary" title="" checked>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="" lay-skin="primary" title="" checked>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="" lay-skin="primary" title="" checked>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script src="../../layui/layui.js"></script>
+        <script src="reportSearch"></script>
+    </form>
+    <script>
+        //Demo
+        layui.use('form', function() {
+            var form = layui.form;
+            var $ = layui.jquery
+
+            //监听提交
+            form.on('submit(formDemo)', function(data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+
+        });
+    </script>
+</body>
+
+</html>

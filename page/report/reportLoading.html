@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main system Reports</title>
+    <meta http-equiv="Content-Type" />
+    <meta charset="UTF-8">
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../stylesheets/style.css">
+</head>
+<script>
+</script>
+
+<body>
+    <form class="layui-form reportSearch">
+        <blockquote class="layui-elem-quote quoteBox">
+            <form class="layui-form">
+                <div class="layui-block">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">选择平台：</label>
+                        <div id="outpaybox">
+                            <a class="layui-btn search_btn layui-btn-normal" id="outpayboxtoggle">更多平台</a>
+                            <div class="plantbox">
+                                <div class="outboxout" style="display: none;">
+                                    <div class="layui-inline">
+                                        <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">全选</a>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">彩票类</a>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">体育类</a>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">电子类</a>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">视讯类</a>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <a href="#" class="layui-btn layui-btn-sm layui-btn-normal">棋牌类</a>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <a class="layui-btn layui-btn layui-btn-sm green">
+                                            <i class="layui-icon"></i>清空</a>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <a class="layui-btn layui-btn layui-btn-sm orange">
+                                            <i class="layui-icon"></i>完成选择</a>
+                                    </div>
+                                    <table class="layui-table" lay-even="" lay-skin="nob">
+                                        <colgroup>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>彩票</th>
+                                                <th>视讯</th>
+                                                <th>电子</th>
+                                                <th>体育</th>
+                                                <th>棋牌</th>
+                                                <th>3D</th>
+                                                <th>捕鱼</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="layui-input-inline">
+                                                        <input type="checkbox" name="" lay-skin="primary" title="传统彩">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="" lay-skin="primary" title="" checked>
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="layui-input-inline checkall">
+                                                        <input type="checkbox" name="" lay-skin="primary" title="皇冠" checked>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <input type="checkbox" name="" lay-skin="primary" title="" checked>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="layui-input-inline">
+                                                        <input type="checkbox" name="" lay-skin="primary" title="CMD" checked>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <input type="checkbox" name="" lay-skin="primary" title="">
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="layui-input-inline">
+                                                        <input type="checkbox" name="" lay-skin="primary" title="沙巴">
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <input type="checkbox" name="" lay-skin="primary" title="">
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="layui-input-inline">
+                                                        <input type="checkbox" name="" lay-skin="primary" title="BBIN">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="" lay-skin="primary" title="" checked>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="" lay-skin="primary" title="" checked>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="" lay-skin="primary" title="" checked>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <select name="" lay-verify="required">
+                            <option value="0">正式线数据</option>
+                            <option value="1">正式线数据</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline" id="dataOutput">
+                    <i class="layui-icon info-icon"> &#xe60b;</i>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <select name="" lay-verify="required">
+                            <option value="0">大大股东</option>
+                            <option value="1">大大大股东</option>
+                            <option value="2">大大大大股东</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" placeholder="">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="dateStart" placeholder="开始时间">
+                    </div>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
+                    </div>
+                </div>
+                <div class="layui-inline" id="dataOutput2">
+                    <i class="layui-icon info-icon"> &#xe60b;</i>
+                </div>
+
+
+                <div class="layui-inline">
+                    <div class="layui-form-item">
+                        <select name="" lay-verify="required">
+                            <option value="0">快选</option>
+                            <option value="1">快选</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <a class="layui-btn search_btn layui-btn-normal" data-type="reload">查询</a>
+                </div>
+            </form>
+        </blockquote>
+        <div class="contentbox alertboxout alert_loading">
+            <div class="alertbox">
+                <div class="alertimg">
+                    <div class="lds-svg ng-scope">
+                        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-bar-chart">
+                            <g transform="rotate(180 50 50)">
+                                <rect ng-attr-x="{{config.x1}}" y="15" ng-attr-width="{{config.width}}" height="63.4333" fill="#0051a2" x="15" width="10">
+                                    <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                                        begin="-0.32000000000000006s" repeatCount="indefinite"></animate>
+                                </rect>
+                                <rect ng-attr-x="{{config.x2}}" y="15" ng-attr-width="{{config.width}}" height="49.9924" fill="#1b75be" x="35" width="10">
+                                    <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                                        begin="-0.16000000000000003s" repeatCount="indefinite"></animate>
+                                </rect>
+                                <rect ng-attr-x="{{config.x3}}" y="15" ng-attr-width="{{config.width}}" height="67.621" fill="#408ee0" x="55" width="10">
+                                    <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                                        begin="-0.48s" repeatCount="indefinite"></animate>
+                                </rect>
+                                <rect ng-attr-x="{{config.x4}}" y="15" ng-attr-width="{{config.width}}" height="35.9911" fill="#89bff8" x="75" width="10">
+                                    <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                                        begin="0s" repeatCount="indefinite"></animate>
+                                </rect>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="alerttxt">
+                    数据拼命加载中，还需等待......
+                </div>
+            </div>
+        </div>
+        <script src="../../layui/layui.js"></script>
+        <script src="reportLoading.js"></script>
+        <!-- ▼ 日期弹窗 ▼ -->
+        <script>
+            //日期彈窗
+            layui.use('laydate', function() {
+                var laydate = layui.laydate;
+
+                //自定义格式 
+                laydate.render({
+                    elem: '#dateStart',
+                    format: 'yyyy-MM-dd HH:mm:ss',
+                    type: 'datetime',
+                    value: '2018-01-01 00:00:00'
+                });
+                laydate.render({
+                    elem: '#dateEnd',
+                    format: 'yyyy-MM-dd HH:mm:ss',
+                    type: 'datetime',
+                    value: '2018-01-01 00:00:00'
+                });
+            });
+            layui.use(['form', 'layer'], function() {
+                var form = layui.form
+                var $ = layui.jquery
+                $("#dataOutput i").click(function() {
+                    layer.tips('测试线仅支持查询传统彩及皇冠体育平台', '#dataOutput', {
+                        //tips: [1, '#3595CC'], 
+                        tips: [3, '#000'],
+                        time: 5000
+                    });
+                });
+                $("#dataOutput2 i").click(function() {
+                    layer.tips('本平台的查询时间已与第三方同步', '#dataOutput2', {
+                        //tips: [1, '#3595CC'], 
+                        tips: [3, '#000'],
+                        time: 5000
+                    });
+                });
+            });
+            layui.use(['jquery'], function() {
+                var $ = jQuery = layui.$; // 你可以在下面的 js 代码中使用你熟悉的 $, jQuery 
+                $("#outpayboxtoggle").click(function() {
+                    $(".outboxout").toggle();
+                });
+            });
+        </script>
+    </form>
+</body>
+
+</html>

@@ -51,7 +51,7 @@ blockquote .layui-icon {
 .webnews_edit .layui-form-select dl dd.layui-this,
 .reportSearch .layui-form-select dl dd.layui-this,
 .layui-form-checked[lay-skin=primary] i {
-    background-color: rgb(85, 172, 238);
+    background-color: #70bcf6;
     border-color: 1px solid rgb(85, 172, 238);
 }
 
@@ -265,4 +265,8 @@ iframe {
 .alert_loading .alertbox .alerttxt {
     margin-top: 0px;
     text-align: center;
+}
+
+.input_width8 {
+    width: 8%;
 }

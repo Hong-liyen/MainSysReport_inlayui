@@ -3,15 +3,15 @@
 
 <head>
     <title>Main system Reports</title>
-    <meta http-equiv="Content-Type" />
+    <meta http-equiv="Content-Type"/>
     <meta charset="UTF-8">
     <!--[if lt IE 9]>
     <script src="/js/html5shiv.js"></script>
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/screen.css" />
-    <link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
-    <link rel="stylesheet" href="../../stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/screen.css"/>
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/myjs.js"></script>
 </head>
 
 <body>
@@ -32,10 +32,8 @@
                             <li class="lottery_class">电子类</li>
                             <li class="lottery_class active">视讯类</li>
                             <li class="lottery_class">棋牌类</li>
-                            <li class="ctrlbtn lottery_delete btnhover">
-                                <i class="icon-icon_pt_trashcan"></i>清空</li>
-                            <li class="ctrlbtn lottery_chose btnhover">
-                                <i class="icon-checkmark"></i>完成选择</li>
+                            <li class="ctrlbtn lottery_delete btnhover"><i class="icon-icon_pt_trashcan"></i>清空</li>
+                            <li class="ctrlbtn lottery_chose btnhover"><i class="icon-checkmark"></i>完成选择</li>
                         </ul>
                         <div class="tablestyle table_plant">
                             <table>
@@ -51,11 +49,8 @@
                                         <td>捕鱼</td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>传统彩</td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>传统彩</td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -64,145 +59,99 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>皇冠</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>皇冠</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>CMD</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>沙巴</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>CMD</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>BBIN</td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
-                                        <td>
-                                            <i class="icon-check_circle active"></i>
-                                        </td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>沙巴</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>MG</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>BBIN</td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle active"></i>
-                                        </td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>MG</td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>AG</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>AG</td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle active"></i>
-                                        </td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle"></i></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>PT</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>PT</td>
                                         <td></td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>新MG</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>新MG</td>
                                         <td></td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>MWG</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>MWG</td>
                                         <td></td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>PP</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>PP</td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -210,12 +159,9 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>OG</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>OG</td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle active"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle active"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -223,12 +169,9 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>HG</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>HG</td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle active"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle active"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -236,12 +179,9 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>DS</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>DS</td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle active"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle active"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -249,12 +189,9 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>ALLBET</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>ALLBET</td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle active"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle active"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -262,12 +199,9 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>OPUS</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>OPUS</td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle active"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle active"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -275,12 +209,9 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>LEBO</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>LEBO</td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle active"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle active"></i></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -288,16 +219,13 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td class="check_all">
-                                            <i class="icon-check_circle"></i>VG</td>
+                                        <td class="check_all"><i class="icon-check_circle"></i>VG</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td>
-                                            <i class="icon-check_circle"></i>
-                                        </td>
+                                        <td><i class="icon-check_circle"></i></td>
                                         <td></td>
                                     </tr>
                                 </tbody>
@@ -309,9 +237,9 @@
             <div class="searchlistline">
                 <div class="gamedata_out">
                     <select class="gamedata" name="gamedata_type">
-                    <option value="0">正式线数据</option>
-                    <option value="1">正式线数据</option>
-                </select>
+                        <option value="0">正式线数据</option>
+                        <option value="1">正式线数据</option>
+                    </select>
                 </div>
                 <div class="information_out">
                     <i class="icon-icon_information"></i>
@@ -319,10 +247,10 @@
                 </div>
                 <div class="bigboss_out">
                     <select class="bigboss" name="bigboss_type">
-                    <option value="all">全部</option>
-                    <option value="1">大大大股东</option>
-                    <option value="2">大大大大股东</option>
-                </select>
+                        <option value="all">全部</option>
+                        <option value="1">大大大股东</option>
+                        <option value="2">大大大大股东</option>
+                    </select>
                 </div>
                 <div class="inputout">
                     <input type="text" name="lotterynumber">
@@ -334,7 +262,8 @@
                         <div class="datebox">
                             <div class="month month_one">
                                 <div class="month_year">
-                                    <i class="icon-chevron-left"></i> 4月-2018
+                                    <i class="icon-chevron-left"></i>
+                                    4月-2018
                                 </div>
                                 <div class="daybox">
                                     <ul class="week">
@@ -541,17 +470,15 @@
                         <div class="information_txt">本平台的查询时间已与第三方同步</div>
                     </div>
                     <select name="lotterynumber_type">
-                    <option value="快选">快选</option>
-                    <option value="快选">快选</option>
-                </select>
+                        <option value="快选">快选</option>
+                        <option value="快选">快选</option>
+                    </select>
                     <div class="searchbtn btnhover">
                         <i class="icon-search"></i>查询
                     </div>
                 </div>
                 <div class="prepageout">
-                    <a href="reportsearch.html#3">
-                        <div class="prepage btnhover">返回上层页面</div>
-                    </a>
+                    <a href="reportsearch.html#3"><div class="prepage btnhover">返回上层页面</div></a>
                 </div>
                 <!--
                 <div class="exportout">
@@ -569,25 +496,28 @@
                         <div class="alertimg">
                             <div class="lds-svg ng-scope">
                                 <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-bar-chart">
-                                <g transform="rotate(180 50 50)">
-                                    <rect ng-attr-x="{{config.x1}}" y="15" ng-attr-width="{{config.width}}" height="69.9721" fill="#0051a2" x="15" width="10">
-                                        <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
-                                            begin="-0.32000000000000006s" repeatCount="indefinite"></animate>
-                                    </rect>
-                                    <rect ng-attr-x="{{config.x2}}" y="15" ng-attr-width="{{config.width}}" height="56.7644" fill="#1b75be" x="35" width="10">
-                                        <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
-                                            begin="-0.16000000000000003s" repeatCount="indefinite"></animate>
-                                    </rect>
-                                    <rect ng-attr-x="{{config.x3}}" y="15" ng-attr-width="{{config.width}}" height="40.386" fill="#408ee0" x="55" width="10">
-                                        <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
-                                            begin="-0.48s" repeatCount="indefinite"></animate>
-                                    </rect>
-                                    <rect ng-attr-x="{{config.x4}}" y="15" ng-attr-width="{{config.width}}" height="48.9533" fill="#89bff8" x="75" width="10">
-                                        <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
-                                            begin="0s" repeatCount="indefinite"></animate>
-                                    </rect>
-                                </g>
-                            </svg>
+                                    <g transform="rotate(180 50 50)">
+                                        <rect ng-attr-x="{{config.x1}}" y="15" ng-attr-width="{{config.width}}" height="69.9721" fill="#0051a2" x="15" width="10">
+                                            <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                                                begin="-0.32000000000000006s" repeatCount="indefinite"></animate>
+                                        </rect>
+                                        <rect ng-attr-x="{{config.x2}}" y="15" ng-attr-width="{{config.width}}" height="56.7644" fill="#1b75be" x="35"
+                                            width="10">
+                                            <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                                                begin="-0.16000000000000003s" repeatCount="indefinite"></animate>
+                                        </rect>
+                                        <rect ng-attr-x="{{config.x3}}" y="15" ng-attr-width="{{config.width}}" height="40.386" fill="#408ee0" x="55"
+                                            width="10">
+                                            <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                                                begin="-0.48s" repeatCount="indefinite"></animate>
+                                        </rect>
+                                        <rect ng-attr-x="{{config.x4}}" y="15" ng-attr-width="{{config.width}}" height="48.9533" fill="#89bff8" x="75"
+                                            width="10">
+                                            <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
+                                                begin="0s" repeatCount="indefinite"></animate>
+                                        </rect>
+                                    </g>
+                                </svg>
                             </div>
                         </div>
                         <div class="alerttxt">
@@ -641,9 +571,7 @@
                                 <td>大股东</td>
                                 <td>oppm001</td>
                                 <td>4000</td>
-                                <td>
-                                    <a class="tablelink" href="">187200.00</a>
-                                </td>
+                                <td><a class="tablelink" href="">187200.00</a></td>
                                 <td>187200.00</td>
                                 <td class="green">-514.88</td>
                                 <td>0.00</td>
@@ -655,9 +583,7 @@
                                 <td>大股东</td>
                                 <td>oppm002</td>
                                 <td>3000</td>
-                                <td>
-                                    <a class="tablelink" href="">187200.00</a>
-                                </td>
+                                <td><a class="tablelink" href="">187200.00</a></td>
                                 <td>187200.00</td>
                                 <td class="red">3070.68</td>
                                 <td>0.00</td>
@@ -669,9 +595,7 @@
                                 <td>大股东</td>
                                 <td>oppm003</td>
                                 <td>20000</td>
-                                <td>
-                                    <a class="tablelink" href="">187200.00</a>
-                                </td>
+                                <td><a class="tablelink" href="">187200.00</a></td>
                                 <td>8888.00</td>
                                 <td class="red">3070.68</td>
                                 <td>0.00</td>
@@ -683,9 +607,7 @@
                                 <td>大股东</td>
                                 <td>oppm001</td>
                                 <td>1000</td>
-                                <td>
-                                    <a class="tablelink" href="">187200.00</a>
-                                </td>
+                                <td><a class="tablelink" href="">187200.00</a></td>
                                 <td>187200.00</td>
                                 <td class="red">3070.68</td>
                                 <td>0.00</td>
@@ -697,9 +619,7 @@
                                 <td>大股东</td>
                                 <td>oppm001</td>
                                 <td>4555</td>
-                                <td>
-                                    <a class="tablelink" href="">87200.00</a>
-                                </td>
+                                <td><a class="tablelink" href="">87200.00</a></td>
                                 <td>187200.00</td>
                                 <td class="red">3070.68</td>
                                 <td>0.00</td>
@@ -734,25 +654,19 @@
                     </table>
                     <div class="searchpagebar">
                         <div class="allpage">第1/ 23 条</div>
-                        <div class="mouchline">每页条数
+                        <div class="mouchline">每页条数 
                             <select name="mouchline_select">
-                            <option value="10">10</option>
-                            <option value="50">50</option>
-                        </select>
+                                <option value="10">10</option>
+                                <option value="50">50</option>
+                            </select>
                         </div>
                         <div class="turnpage">
                             <div class="turnpagetxt">首页</div>
-                            <div class="turnpagebtn turnpageleft">
-                                <i class="icon-angle-double-left"></i>
-                            </div>
+                            <div class="turnpagebtn turnpageleft"><i class="icon-angle-double-left"></i></div>
                             <div class="turnpagenumber">1/10</div>
-                            <div class="turnpagebtn turnpageright">
-                                <i class="icon-angle-double-right"></i>
-                            </div>
+                            <div class="turnpagebtn turnpageright"><i class="icon-angle-double-right"></i></div>
                             <div class="turnpagetxt">尾页</div>
-                            <div class="inputout">
-                                <input type="text" name="turnpageinput" value="1">
-                            </div>
+                            <div class="inputout"><input type="text" name="turnpageinput" value="1"></div>
                             <div class="turnpagetxt">跳转</div>
                         </div>
                     </div>
@@ -768,20 +682,6 @@
         -->
         </div>
     </div>
-    <script>
-        //Demo
-        layui.use('form', function() {
-            var form = layui.form;
-            var $ = layui.jquery
-
-            //监听提交
-            form.on('submit(formDemo)', function(data) {
-                layer.msg(JSON.stringify(data.field));
-                return false;
-            });
-
-        });
-    </script>
 </body>
 
 </html>

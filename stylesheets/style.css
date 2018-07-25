@@ -1,8 +1,8 @@
-.orange {
+.bg-orange {
     background-color: #f09e3e;
 }
 
-.green {
+.bg-green {
     background-color: #26bd7b;
 }
 
@@ -265,31 +265,4 @@ iframe {
 .alert_loading .alertbox .alerttxt {
     margin-top: 0px;
     text-align: center;
-}
-
-#outpaybox {
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.plantbox {
-    position: absolute;
-    top: 50px;
-    width: 760px;
-    z-index: 2;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(200, 210, 230, 0.8);
-}
-
-#outpaybox .outboxout {
-    padding: 20px;
-}
-
-#outpaybox .outboxout .layui-icon {
-    font-size: 18px!important;
-    line-height: 1.6!important;
-}
-
-#outpaybox .outboxout table .layui-icon {
-    line-height: 1.2 !important;
 }

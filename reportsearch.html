@@ -9,457 +9,475 @@
     <script src="/js/html5shiv.js"></script>
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="stylesheets/screen.css" />
-    <link rel="stylesheet" href="stylesheets/style.css" />
     <script src="js/jquery-1.12.3.min.js"></script>
     <script src="js/myjs.js"></script>
 </head>
 
 <body>
-    <form class="layui-form reportSearch">
-        <div class="wrapper" id="reportpage">
-            <div class="wrapper-in">
-                <form class="layui-form">
-                    <div class="webnews_edit">
-                        <form class="layui-form">
-                            <blockquote class="layui-elem-quote">
-                                <form class="layui-form">
-                                    <div class="layui-block">
-                                        <div class="layui-inline">
-                                            <div class="linebtn">
-                                                在线存款编辑
-                                            </div>
-                                        </div>
-                                        <div class="layui-inline">
-                                            <div class="linebtn active">
-                                                手机支付排序
-                                            </div>
-                                        </div>
-
-                                        <div class="layui-inline">
-                                            <label class="layui-form-label">按钮角标：</label>
-                                            <input type="radio" name="displaycheck" value="无" title="无" checked>
-                                            <input type="radio" name="displaycheck" value="快" title="快">
-                                            <input type="radio" name="displaycheck" value="安" title="安">
-                                            <input type="radio" name="displaycheck" value="稳" title="稳">
-                                            <input type="radio" name="displaycheck" value="热" title="热">
-                                            <input type="radio" name="displaycheck" value="火" title="火">
-                                            <input type="radio" name="displaycheck" value="大" title="大">
-                                        </div>
-                                    </div>
-                                    <div class="layui-inline">
-                                        <div class="linebtn" method="offset" onclick="payPlatform()">
-                                            新增自定义支付
-                                        </div>
-                                    </div>
-
-
-                                    <div class="layui-input-inline">
-                                        <input type="text" class="layui-input" placeholder="请输入关键字">
-                                    </div>
-                                    <div class="layui-inline">
-                                        <div class="searchbtn btnhover">
-                                            <i class="icon-search"></i>查询
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </blockquote>
-                            <div class="layui-form">
-                                <table class="layui-table" lay-even="" lay-skin="nob">
-                                    <colgroup>
-                                        <col width="250">
-                                        <col width="200">
-                                        <col width="250">
-                                        <col width="250">
-                                        <col width="250">
-                                        <col width="250">
-                                        <col>
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>充值名称</th>
-                                            <th>充值类型</th>
-                                            <th>线上/线下</th>
-                                            <th>排序</th>
-                                            <th>图标 </th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="layui-inline name">
-                                                    <input type="text" class="layui-input" placeholder="微信APP" value="微信APP">
-                                                </div>
-                                            </td>
-                                            <td>微信APP</td>
-                                            <td>线上</td>
-                                            <td>
-                                                <div class="layui-inline sort">
-                                                    <input type="text" class="layui-input" placeholder="2" value="2">
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <img src="images/icon_gf.png" alt="" srcset="">
-                                            </td>
-                                            <td>
-                                                <a class="layui-btn layui-btn-sm layui-btn-normal bg-orange" method="offset" onclick="payPlatform()">编辑</a>
-                                                <a class="layui-btn layui-btn-sm layui-btn-normal bg-green" method="offset" onclick="del()">删除</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </form>
+    <div class="wrapper" id="reportpage">
+        <div class="wrapper-in">
+            <div class="searchline">
+                <div class="searchplane">选择平台：
+                </div>
+                <div class="moreplantbtn_out">
+                    <div class="moreplantbtn btnhover">
+                        更多平台
                     </div>
-                    <blockquote class="layui-elem-quote">
-                        <div class="searchline">
-                            <div class="searchplane">选择平台：
-                            </div>
-                            <div class="moreplantbtn_out">
-                                <div class="moreplantbtn btnhover">
-                                    更多平台
+                    <div class="plantbox">
+                        <ul class="plantctrl">
+                            <li class="lottery_class lottery_all">全选</li>
+                            <li class="lottery_class">彩票类</li>
+                            <li class="lottery_class">体育类</li>
+                            <li class="lottery_class">电子类</li>
+                            <li class="lottery_class active">视讯类</li>
+                            <li class="lottery_class">棋牌类</li>
+                            <li class="ctrlbtn lottery_delete btnhover"><i class="icon-icon_pt_trashcan"></i>清空</li>
+                            <li class="ctrlbtn lottery_chose btnhover"><i class="icon-checkmark"></i>完成选择</li>
+                        </ul>
+                        <div class="tablestyle table_plant">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>彩票</td>
+                                        <td>视讯</td>
+                                        <td>电子</td>
+                                        <td>体育</td>
+                                        <td>棋牌</td>
+                                        <td>3D</td>
+                                        <td>捕鱼</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>传统彩</td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>皇冠</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>CMD</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>沙巴</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>BBIN</td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>MG</td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>AG</td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>PT</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>新MG</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>MWG</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>PP</td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>OG</td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>HG</td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>DS</td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>ALLBET</td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>OPUS</td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>LEBO</td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle active"></i></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="check_all"><i class="icon-check_circle"></i>VG</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><i class="icon-check_circle"></i></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="searchlistline">
+                <div class="gamedata_out">
+                    <select class="gamedata" name="gamedata_type">
+                        <option value="0">正式线数据</option>
+                        <option value="1">正式线数据</option>
+                    </select>
+                </div>
+                <div class="information_out">
+                    <i class="icon-icon_information"></i>
+                    <div class="information_txt">测试线仅支持查询传统彩及皇冠体育平台</div>
+                </div>
+                <div class="bigboss_out">
+                    <select class="bigboss" name="bigboss_type">
+                        <option value="all">全部</option>
+                        <option value="1">大大大股东</option>
+                        <option value="2">大大大大股东</option>
+                    </select>
+                </div>
+                <div class="inputout">
+                    <input type="text" name="lotterynumber">
+                </div>
+                <div class="lotterynumber_search">
+                    <div class="inputout datepickerout">
+                        <input type="text" name="datepicker" class="datepicker" placeholder="请选择时间">
+                        <i class="icon-icon_date"></i>
+                        <div class="datebox">
+                            <div class="month month_one">
+                                <div class="month_year">
+                                    <i class="icon-chevron-left"></i> 4月-2018
                                 </div>
-                                <div class="plantbox">
-                                    <ul class="plantctrl">
-                                        <li class="lottery_class lottery_all">全选</li>
-                                        <li class="lottery_class">彩票类</li>
-                                        <li class="lottery_class">体育类</li>
-                                        <li class="lottery_class">电子类</li>
-                                        <li class="lottery_class active">视讯类</li>
-                                        <li class="lottery_class">棋牌类</li>
-                                        <li class="ctrlbtn lottery_delete btnhover">
-                                            <i class="icon-icon_pt_trashcan"></i>清空</li>
-                                        <li class="ctrlbtn lottery_chose btnhover">
-                                            <i class="icon-checkmark"></i>完成选择</li>
+                                <div class="daybox">
+                                    <ul class="week">
+                                        <li>日</li>
+                                        <li>一</li>
+                                        <li>二</li>
+                                        <li>三</li>
+                                        <li>四</li>
+                                        <li>五</li>
+                                        <li>六</li>
                                     </ul>
-                                    <div class="tablestyle table_plant">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>彩票</td>
-                                                    <td>视讯</td>
-                                                    <td>电子</td>
-                                                    <td>体育</td>
-                                                    <td>棋牌</td>
-                                                    <td>3D</td>
-                                                    <td>捕鱼</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>传统彩</td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>皇冠</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>CMD</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>沙巴</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>BBIN</td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td>
-                                                        <i class="icon-check_circle active"></i>
-                                                    </td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>MG</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle active"></i>
-                                                    </td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>AG</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle active"></i>
-                                                    </td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>PT</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>新MG</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>MWG</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>PP</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>OG</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle active"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>HG</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle active"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>DS</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle active"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>ALLBET</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle active"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>OPUS</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle active"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>LEBO</td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle active"></i>
-                                                    </td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="check_all">
-                                                        <i class="icon-check_circle"></i>VG</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>
-                                                        <i class="icon-check_circle"></i>
-                                                    </td>
-                                                    <td></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <ul class="day">
+                                        <li class="block"></li>
+                                        <li class="block"></li>
+                                        <li class="block"></li>
+                                        <li class="block"></li>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li class="active">7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                        <li>13</li>
+                                        <li>14</li>
+                                        <li>15</li>
+                                        <li>16</li>
+                                        <li>17</li>
+                                        <li>18</li>
+                                        <li>19</li>
+                                        <li>20</li>
+                                        <li>21</li>
+                                        <li>22</li>
+                                        <li>23</li>
+                                        <li>24</li>
+                                        <li>25</li>
+                                        <li>26</li>
+                                        <li>27</li>
+                                        <li>28</li>
+                                        <li>29</li>
+                                        <li>30</li>
+                                    </ul>
+                                </div>
+                                <div class="time">
+                                    时间
+                                    <input type="text" name="hour" class="hour" maxlength="2"> :
+                                    <div class="timepickinput">
+                                        <input type="text" name="minute" class="minute" maxlength="2">
+                                        <ul class="timepickbox">
+                                            <li>0</li>
+                                            <li>5</li>
+                                            <li>10</li>
+                                            <li>15</li>
+                                            <li>20</li>
+                                            <li>25</li>
+                                            <li class="active">30</li>
+                                            <li>35</li>
+                                            <li>40</li>
+                                            <li>45</li>
+                                            <li>50</li>
+                                            <li>55</li>
+                                        </ul>
+                                    </div>
+                                    :
+                                    <div class="timepickinput">
+                                        <input type="text" name="second" class="second" maxlength="2">
+                                        <ul class="timepickbox">
+                                            <li>0</li>
+                                            <li>5</li>
+                                            <li>10</li>
+                                            <li>15</li>
+                                            <li>20</li>
+                                            <li>25</li>
+                                            <li class="active">30</li>
+                                            <li>35</li>
+                                            <li>40</li>
+                                            <li>45</li>
+                                            <li>50</li>
+                                            <li>55</li>
+                                        </ul>
+                                    </div>
+                                    <div class="button">
+                                        <div class="up">
+                                            <i class="icon-arrow_drop_down"></i>
+                                        </div>
+                                        <div class="down">
+                                            <i class="icon-arrow_drop_down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="month month_two">
+                                <div class="month_year">
+                                    5月-2018
+                                    <i class="icon-chevron-right"></i>
+                                </div>
+                                <div class="daybox">
+                                    <ul class="week">
+                                        <li>日</li>
+                                        <li>一</li>
+                                        <li>二</li>
+                                        <li>三</li>
+                                        <li>四</li>
+                                        <li>五</li>
+                                        <li>六</li>
+                                    </ul>
+                                    <ul class="day">
+                                        <li class="block"></li>
+                                        <li class="block"></li>
+                                        <li class="block"></li>
+                                        <li class="block"></li>
+                                        <li class="block"></li>
+                                        <li class="block"></li>
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                        <li>13</li>
+                                        <li>14</li>
+                                        <li>15</li>
+                                        <li>16</li>
+                                        <li>17</li>
+                                        <li>18</li>
+                                        <li>19</li>
+                                        <li>20</li>
+                                        <li>21</li>
+                                        <li>22</li>
+                                        <li>23</li>
+                                        <li>24</li>
+                                        <li>25</li>
+                                        <li>26</li>
+                                        <li class="active">27</li>
+                                        <li>28</li>
+                                        <li>29</li>
+                                        <li>30</li>
+                                        <li>31</li>
+                                    </ul>
+                                </div>
+                                <div class="time timepos">
+                                    时间
+                                    <input type="text" name="hour" class="hour" maxlength="2"> :
+                                    <div class="timepickinput">
+                                        <input type="text" name="minute" class="minute" maxlength="2">
+                                        <ul class="timepickbox">
+                                            <li>0</li>
+                                            <li>5</li>
+                                            <li>10</li>
+                                            <li>15</li>
+                                            <li>20</li>
+                                            <li>25</li>
+                                            <li class="active">30</li>
+                                            <li>35</li>
+                                            <li>40</li>
+                                            <li>45</li>
+                                            <li>50</li>
+                                            <li>55</li>
+                                        </ul>
+                                    </div>
+                                    :
+                                    <div class="timepickinput">
+                                        <input type="text" name="second" class="second" maxlength="2">
+                                        <ul class="timepickbox">
+                                            <li>0</li>
+                                            <li>5</li>
+                                            <li>10</li>
+                                            <li>15</li>
+                                            <li>20</li>
+                                            <li>25</li>
+                                            <li class="active">30</li>
+                                            <li>35</li>
+                                            <li>40</li>
+                                            <li>45</li>
+                                            <li>50</li>
+                                            <li>55</li>
+                                        </ul>
+                                    </div>
+                                    <div class="button">
+                                        <div class="up">
+                                            <i class="icon-arrow_drop_down"></i>
+                                        </div>
+                                        <div class="down">
+                                            <i class="icon-arrow_drop_down"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="layui-inline input_width8">
-                            <select name="" lay-verify="required">
-                                <option value="0">正式线数据</option>
-                                <option value="1">正式线数据</option>
-                            </select>
-                        </div>
-                        <div class="information_out">
-                            <i class="icon-icon_information"></i>
-                            <div class="information_txt">测试线仅支持查询传统彩及皇冠体育平台</div>
-                        </div>
-                        <div class="layui-inline input_width8">
-                            <select name="" lay-verify="required">
-                            <option value="0">大大股东</option>
-                            <option value="1">大大大股东</option>
-                            <option value="2">大大大大股东</option>
-                        </select>
-                        </div>
-
-                        <div class="layui-inline">
-                            <div class="layui-input-inline">
-                                <input type="text" class="layui-input" placeholder="">
-                            </div>
-                        </div>
-                        <div class="layui-inline">
-                            <div class="layui-input-inline">
-                                <input type="text" class="layui-input" id="dateStart" placeholder="开始时间">
-                            </div>
-                            <div class="layui-input-inline">
-                                <input type="text" class="layui-input" id="dateEnd" placeholder="结束时间">
-                            </div>
-                        </div>
-                        <div class="information_out">
-                            <i class="icon-icon_information"></i>
-                            <div class="information_txt">本平台的查询时间已与第三方同步</div>
-                        </div>
-                        <div class="layui-inline input_width8">
-                            <select name="" lay-verify="required">
-        <option value="0">快选</option>
-        <option value="1">快选</option>
-    </select>
-                        </div>
-                        <div class="layui-inline">
-                            <div class="searchbtn btnhover">
-                                <i class="icon-search"></i>查询
-                            </div>
-                        </div>
-                        <div class="layui-inline">
-                            <div class="prepageout">
-                                <a href="">
-                                    <div class="prepage btnhover">返回上层页面</div>
-                                </a>
-                            </div>
-                        </div>
-                    </blockquote>
-
-                    <!--
+                    </div>
+                    <div class="information_out">
+                        <i class="icon-icon_information"></i>
+                        <div class="information_txt">本平台的查询时间已与第三方同步</div>
+                    </div>
+                    <select name="lotterynumber_type">
+                        <option value="快选">快选</option>
+                        <option value="快选">快选</option>
+                    </select>
+                    <div class="searchbtn btnhover">
+                        <i class="icon-search"></i>查询
+                    </div>
+                </div>
+                <!--
                 <div class="exportout">
                     <div class="export"><i class="icon-icon_export"></i>导出EXCEL</div>
                     <div class="information_out"><i class="icon-icon_information"></i>
@@ -468,8 +486,6 @@
                 </div>
                 -->
             </div>
-            </form>
-
             <div class="contentboxout">
                 <!--alert_loading-->
                 <div class="contentbox alertboxout alert_loading">
@@ -482,15 +498,18 @@
                                             <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
                                                 begin="-0.32000000000000006s" repeatCount="indefinite"></animate>
                                         </rect>
-                                        <rect ng-attr-x="{{config.x2}}" y="15" ng-attr-width="{{config.width}}" height="56.7644" fill="#1b75be" x="35" width="10">
+                                        <rect ng-attr-x="{{config.x2}}" y="15" ng-attr-width="{{config.width}}" height="56.7644" fill="#1b75be" x="35"
+                                            width="10">
                                             <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
                                                 begin="-0.16000000000000003s" repeatCount="indefinite"></animate>
                                         </rect>
-                                        <rect ng-attr-x="{{config.x3}}" y="15" ng-attr-width="{{config.width}}" height="40.386" fill="#408ee0" x="55" width="10">
+                                        <rect ng-attr-x="{{config.x3}}" y="15" ng-attr-width="{{config.width}}" height="40.386" fill="#408ee0" x="55"
+                                            width="10">
                                             <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
                                                 begin="-0.48s" repeatCount="indefinite"></animate>
                                         </rect>
-                                        <rect ng-attr-x="{{config.x4}}" y="15" ng-attr-width="{{config.width}}" height="48.9533" fill="#89bff8" x="75" width="10">
+                                        <rect ng-attr-x="{{config.x4}}" y="15" ng-attr-width="{{config.width}}" height="48.9533" fill="#89bff8" x="75"
+                                            width="10">
                                             <animate attributeName="height" calcMode="spline" values="50;70;30;50" keyTimes="0;0.33;0.66;1" dur="0.8" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1"
                                                 begin="0s" repeatCount="indefinite"></animate>
                                         </rect>
@@ -547,158 +566,33 @@
                                 <td>1</td>
                                 <td>传统彩</td>
                                 <td>400</td>
-                                <td>
-                                    <a class="tablelink" href="">1800.00</a>
-                                </td>
+                                <td><a class="tablelink" href="">1800.00</a></td>
                                 <td>1800.00</td>
                                 <td class="green">-514.00</td>
                                 <td>--</td>
                                 <td>--</td>
                                 <td>--</td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>AG捕鱼</td>
-                                <td>200</td>
-                                <td>
-                                    <a class="tablelink" href="">1200.00</a>
-                                </td>
-                                <td>1200.00</td>
-                                <td class="red">1214.00</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>35555.00</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>MG视讯</td>
-                                <td>4800</td>
-                                <td>
-                                    <a class="tablelink" href="">7200.00</a>
-                                </td>
-                                <td>1800.00</td>
-                                <td class="green">-1514.00</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>BB体育</td>
-                                <td>1200</td>
-                                <td>
-                                    <a class="tablelink" href="">87200.00</a>
-                                </td>
-                                <td>1800.00</td>
-                                <td class="red">6514.00</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>CMD体育</td>
-                                <td>3650</td>
-                                <td>
-                                    <a class="tablelink" href="">187200.00</a>
-                                </td>
-                                <td>1800.00</td>
-                                <td class="green">-5314.00</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>PT电子</td>
-                                <td>7890</td>
-                                <td>
-                                    <a class="tablelink" href="">67200.00</a>
-                                </td>
-                                <td>67200.00</td>
-                                <td class="green">-314.00</td>
-                                <td>0.00</td>
-                                <td>0.00</td>
-                                <td>--</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>沙巴体育</td>
-                                <td>45230</td>
-                                <td>
-                                    <a class="tablelink" href="">287200.00</a>
-                                </td>
-                                <td>287200.00</td>
-                                <td class="red">6514.00</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>OG</td>
-                                <td>5840</td>
-                                <td>
-                                    <a class="tablelink" href="">6200.00</a>
-                                </td>
-                                <td>6200.00</td>
-                                <td class="red">5414.00</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                            </tr>
-                            <tr>
-                                <td>小计</td>
-                                <td>--</td>
-                                <td>69210</td>
-                                <td>645200.00</td>
-                                <td>645200.00</td>
-                                <td class="red">12000.00</td>
-                                <td>0.00</td>
-                                <td>0.00</td>
-                                <td>284440.00</td>
-                            </tr>
-                            <tr>
-                                <td>总计</td>
-                                <td>--</td>
-                                <td>69210</td>
-                                <td>
-                                    <a class="tablelink" href="reportsearch_inpage.html#3">645200.00</a>
-                                </td>
-                                <td>645200.00</td>
-                                <td class="red">12000.00</td>
-                                <td>0.00</td>
-                                <td>0.00</td>
-                                <td>284440.00</td>
-                            </tr>
                         </tbody>
                     </table>
-                    <!-- <div class="searchpagebar">
+                    <div class="searchpagebar">
                         <div class="allpage">第1/ 23 条</div>
                         <div class="mouchline">每页条数
-                            <div class="layui-inline">
-                                <select>
-                                    <option value="10">10</option>
-                                    <option value="50">50</option>
-                                </select>
-                            </div>
+                            <select name="mouchline_select">
+                                <option value="10">10</option>
+                                <option value="50">50</option>
+                            </select>
                         </div>
                         <div class="turnpage">
                             <div class="turnpagetxt">首页</div>
-                            <div class="turnpagebtn turnpageleft">
-                                <i class="icon-angle-double-left"></i>
-                            </div>
+                            <div class="turnpagebtn turnpageleft"><i class="icon-angle-double-left"></i></div>
                             <div class="turnpagenumber">1/10</div>
-                            <div class="turnpagebtn turnpageright">
-                                <i class="icon-angle-double-right"></i>
-                            </div>
+                            <div class="turnpagebtn turnpageright"><i class="icon-angle-double-right"></i></div>
                             <div class="turnpagetxt">尾页</div>
-                            <div class="inputout">
-                                <input type="text" name="turnpageinput" value="1">
-                            </div>
+                            <div class="inputout"><input type="text" name="turnpageinput" value="1"></div>
                             <div class="turnpagetxt">跳转</div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <!--
@@ -710,43 +604,7 @@
             </div>
         -->
         </div>
-        </div>
-        <script src="layui/layui.js"></script>
-        <script src="reportList.js"></script>
-        <script>
-            // 设定币别 
-            function payPlatform() {
-                layer.open({
-                    type: 1,
-                    closeBtn: 1,
-                    btn: ['保存', '取消'],
-                    btnAlign: 'c',
-                    shade: 0.5,
-                    title: '自定义支付',
-                    area: ['700px', '560px'],
-                    content: '<iframe src="webnews_edit_Pop.html" width="100%" height="90%"></iframe>'
-                });
-            }
-            //日期彈窗
-            layui.use('laydate', function() {
-                var laydate = layui.laydate;
-
-                //自定义格式 
-                laydate.render({
-                    elem: '#dateStart',
-                    format: 'yyyy-MM-dd HH:mm:ss',
-                    type: 'datetime',
-                    value: '2018-01-01 00:00:00'
-                });
-                laydate.render({
-                    elem: '#dateEnd',
-                    format: 'yyyy-MM-dd HH:mm:ss',
-                    type: 'datetime',
-                    value: '2018-01-01 00:00:00'
-                });
-            });
-        </script>
-    </form>
+    </div>
 </body>
 
 </html>

@@ -1,3 +1,7 @@
+body {
+    background-color: #f2f2f2;
+}
+
 .bg-orange {
     background-color: #f09e3e;
 }
@@ -6,12 +10,20 @@
     background-color: #26bd7b;
 }
 
+.text-orange {
+    color: #f09e3e;
+}
+
 .text-blue {
     color: #3e8ef0;
 }
 
 .text-green {
     color: #26bd7b;
+}
+
+.layui-center {
+    text-align: center;
 }
 
 .layui-table[lay-skin=nob] td,
@@ -36,6 +48,11 @@ blockquote .layui-icon {
     font-size: 28px !important;
     line-height: 1.2;
     cursor: pointer;
+}
+
+.layui-form-radio>i:hover,
+.layui-form-radioed>i {
+    color: #55ACEF;
 }
 
 .layui-form-select dl dd.layui-this {
@@ -269,4 +286,83 @@ iframe {
 
 .input_width8 {
     width: 8%;
+}
+
+
+/* userinfo */
+
+.userinfo .layui-form-item {
+    margin-bottom: 15px;
+}
+
+.userinfo .layui-form-label {
+    text-align: left;
+    width: 160px;
+    color: #12396b;
+}
+
+.userinfo .layui-input-block {
+    margin-left: 190px;
+}
+
+.userinfo .layui-input-block>input[type="text"] {
+    width: 50%;
+}
+
+.userinfo .layui-form {
+    display: inline-block;
+    padding: 9px 0 !important;
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+.userinfo .mark {
+    color: #dd1515;
+}
+
+.userinfo .layui-form-title {
+    padding: 9px 0;
+    width: 56px;
+    color: #666;
+}
+
+.userinfo .layui-inline-block {
+    display: inline-block;
+    width: 16%;
+}
+
+.userinfo .layui-inline-block .layui-input-inline {
+    width: 60%;
+}
+
+.userinfo .layui-form-item .layui-inline {
+    margin-right: 0;
+}
+
+.userinfo .status {
+    line-height: 28px;
+    margin: 6px 10px 0 0;
+    padding-right: 10px;
+}
+
+.userinfo .title {
+    padding: 30px 35px;
+    font-weight: bold;
+}
+
+.userinfo .layui-container {
+    width: 1360px;
+}
+
+.userinfo .layui-btn {
+    width: 15%;
+}
+
+.userinfo .mag30 {
+    margin: 30px 0 15px;
+}
+
+.userinfo .wrapper-in {
+    background-color: #fff;
+    margin: 0;
 }

@@ -6,50 +6,44 @@
 //@import "compass/reset";
 @import "mixin.scss";
 @import "iconfontstyle.css";
+
 @mixin maintext() {
     font-size: 24px;
     color: #1673ba;
 }
-
 @mixin stext() {
     font-size: 10px;
 }
-
 @mixin midtext() {
     font-size: 16px;
     font-weight: 500;
+} 
+@mixin cssbox-shadow(){
+    @include css3(box-shadow,0px 0px 5px rgba(200,210,230,.8));
 }
 
-@mixin cssbox-shadow() {
-    @include css3(box-shadow, 0px 0px 5px rgba(200, 210, 230, .8));
-}
-
-a {
+a{
     text-decoration: none;
 }
-
 li {
     list-style: none;
 }
-
-ul {
+ul{
     padding: 0;
     margin: 0;
 }
-
-input {
+input{
     border: 1px solid #bad9f0;
     background: rgba(0, 0, 0, 0);
     line-height: 28px;
     height: 28px;
     padding: 0 10px;
-    @include css3(transition, all .2s ease);
+    @include css3(transition,all .2s ease);
     width: 145px;
 }
-
-.inputout {
+.inputout{
     position: relative;
-    >i {
+    >i{
         position: absolute;
         right: 10px;
         line-height: 30px;
@@ -58,24 +52,22 @@ input {
         margin-top: 2px;
     }
 }
-
-select {
+select{
     @include cssbox-shadow();
     border: 0px;
     line-height: 30px;
     height: 30px;
     padding: 0 7px;
     /*很关键：将默认的select选择框样式清除*/
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
     background: #fff url("../images/select_arrow.png") no-repeat scroll right 5px center;
     padding-right: 21px;
     cursor: pointer;
     min-width: 80px;
 }
-
-.icon-icon_information {
+.icon-icon_information{
     //margin-left: 7px;
     width: 23px;
     height: 23px;
@@ -84,49 +76,44 @@ select {
     vertical-align: middle;
     text-align: center;
     cursor: pointer;
-    @include css3(border-radius,
-    50%);
+    @include css3(border-radius,50%);
     border: 1px solid #3e8ef0;
-    @include css3(transition,
-    all .2s ease);
-    &:hover {
+    @include css3(transition,all .2s ease);
+    &:hover{
         color: #fff;
         background: #3e8ef0;
     }
 }
-
-.information_show {
-    .information_txt {
+.information_show{
+    .information_txt{
         display: inherit!important;
     }
-    .icon-icon_information {
+    .icon-icon_information{
         color: #fff;
         background: #3e8ef0;
     }
 }
-
-.information_out {
+.information_out{
     position: relative;
     display: inline;
-    &:hover {
-        .information_txt {
+    &:hover{
+        .information_txt{
             display: inherit;
         }
-        .icon-icon_information {
+        .icon-icon_information{
             color: #fff;
             background: #3e8ef0;
         }
     }
-    .information_txt_right {
+    .information_txt_right{
         right: 0px;
         left: auto!important;
-        &:before,
-        &:after {
+        &:before,&:after{
             left: auto!important;
             right: 0px;
         }
     }
-    .information_txt {
+    .information_txt{
         @include cssbox-shadow();
         border: 1px solid #bad9f0;
         line-height: 20px;
@@ -142,23 +129,21 @@ select {
         text-align: left;
         display: none;
         font-size: 16px;
-        @include css3(transition,
-        all .2s ease);
-        &:before,
-        &:after {
+        @include css3(transition,all .2s ease);
+        &:before,&:after{
             position: absolute;
             content: "";
             width: 0;
             height: 0;
             border-style: solid;
         }
-        &:after {
+        &:after{
             top: -8px;
             left: -1px;
             border-width: 0 9px 10px 9px;
             border-color: transparent transparent #edf4ff transparent;
         }
-        &:before {
+        &:before{
             top: -10px;
             left: -1px;
             border-width: 0 9px 10px 9px;
@@ -166,63 +151,55 @@ select {
         }
     }
 }
-
-.btn {
+.btn{
     background: #3e8ef0;
     color: #fff;
     line-height: 30px;
     padding: 0 10px;
     cursor: pointer;
 }
-
-.btnhover {
+.btnhover{
     position: relative;
-    &:after {
+    &:after{
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
         position: absolute;
         content: "";
-        background: rgba(255, 255, 255, 0);
-        @include css3(transition,
-        all .2s ease);
+        background: rgba(255, 255, 255,0);
+        @include css3(transition,all .2s ease);
     }
-    &:hover {
+    &:hover{
         //background: #59a4ff!important;
-        &:after {
-            background: rgba(255, 255, 255, .25);
+        &:after{
+            background: rgba(255, 255, 255,.25);
         }
     }
 }
-
-.linebtn {
+.linebtn{
     color: #3e8ef0;
     border: 1px solid #3e8ef0;
-    @include css3(transition,
-    all .2s ease);
-    height: 35px;
-    line-height: 35px;
+    @include css3(transition,all .2s ease);
+    height: 28px;
+    line-height: 28px;
     text-align: center;
     cursor: pointer;
     vertical-align: middle;
     padding: 0 5px;
-    &:hover {
+    &:hover{
         background: #3e8ef0;
-        color: #fff;
+        color:#fff;
     }
 }
-
-.linebtn.active {
+.linebtn.active{
     background: #3e8ef0;
-    color: #fff;
+    color:#fff;
 }
-
-.savebtn {
+.savebtn{
     background: #f09e3e;
     color: #fff;
-    @include css3(transition,
-    all .2s ease);
+    @include css3(transition,all .2s ease);
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -230,19 +207,17 @@ select {
     vertical-align: middle;
     padding: 0 5px;
     min-width: 90px;
-    i {
+    i{
         color: #fff;
         font-size: 18px;
         vertical-align: -3px;
         margin-right: 5px;
     }
 }
-
-.ctrlbtn {
+.ctrlbtn{
     color: #fff;
     background: #3e8ef0;
-    @include css3(transition,
-    all .2s ease);
+    @include css3(transition,all .2s ease);
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -250,38 +225,32 @@ select {
     vertical-align: middle;
     padding: 0 5px;
     min-width: 90px;
-    i {
+    i{
         color: #fff;
         font-size: 18px;
         vertical-align: -3px;
         margin-right: 5px;
     }
 }
-
-.deletebtn {
+.deletebtn{
     background: #26bd7b;
 }
-
-.editbtn {
+.editbtn{
     background: #f09e3e;
 }
-
-.radiostyle {
+.radiostyle{
     display: inline-block;
     border: 1px solid #c2c2c2;
     width: 10px;
     height: 10px;
     margin-right: 7px;
-    @include css3(border-radius,
-    50%);
-    @include css3(transition,
-    all .2s ease);
+    @include css3(border-radius,50%);
+    @include css3(transition,all .2s ease);
 }
-
-.displaycheck {
+.displaycheck{
     display: none;
-    &:checked {
-        ~.radiostyle {
+    &:checked{
+        ~.radiostyle{
             border: 4px solid #d9e6f0;
             width: 4px;
             height: 4px;
@@ -290,30 +259,25 @@ select {
     }
 }
 
-select::-ms-expand {
-    display: none;
+select::-ms-expand { display: none; }
+[class^="icon-"], [class*=" icon-"] {
+    color:#3e8ef0;
 }
-
-[class^="icon-"],
-[class*=" icon-"] {
-    color: #3e8ef0;
-}
-
 body {
+    background: #f4f9ff;
     color: #4a4a4a;
     font: normal 14px/30px "Microsoft Yahei";
     margin: 0;
 }
 
 .wrapper {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    overflow: hidden;
+    width:100%;
+    height:auto;
+    margin:0 auto;
+    overflow:hidden;
     //min-width: 1700px;
 }
-
-.wrapper-in {
+.wrapper-in{
     //width: 1920px;
     padding: 0 12px;
     height: 100%;
@@ -321,21 +285,22 @@ body {
     position: relative;
 }
 
-.searchline {
-    margin: 0 auto 5px auto;
+
+.searchline{
+    margin: 25px auto 5px auto;
     overflow: hidden;
-    >* {
+    >*{
         float: left;
     }
-    .searchplane {
+    .searchplane{
         @include midtext();
-        .inputout {
+        .inputout{
             display: inline;
             position: relative;
-            input {
+            input{
                 width: 100px;
             }
-            i {
+            i{
                 position: absolute;
                 right: 10px;
                 line-height: 30px;
@@ -345,19 +310,18 @@ body {
             }
         }
     }
-    .searchnone {
+    .searchnone{
         margin-left: 95px;
         color: #666666;
         font-size: 12px;
     }
 }
-
-.searchresult {
+.searchresult{
     margin: 0 5px;
-    >* {
+    >*{
         float: left;
     }
-    .searchresult_scroll {
+    .searchresult_scroll{
         width: 30px;
         height: 30px;
         color: #fff;
@@ -369,98 +333,98 @@ body {
         margin-top: 2px;
         cursor: pointer;
     }
-    .searchresult_textbox {
+    .searchresult_textbox{
         overflow: hidden;
         padding: 2px;
         margin: 0;
-        li {
+        li{
             float: left;
             background: #fff;
             @include cssbox-shadow();
             cursor: pointer;
             margin: 0 5px;
             padding: 0 10px;
-            @include css3(transition,
-            all .3s ease);
-            &:hover {
+            @include css3(transition,all .3s ease);
+            &:hover{
                 background: #3e8ef0;
-                color: #fff;
+                color:#fff;
             }
         }
-        .active {
+        .active{
             background: #3e8ef0;
-            color: #fff;
+            color:#fff;
         }
     }
 }
-
-.searchlistline {
+.searchlistline{
     font-size: 16px;
     margin: 10px 0;
-    input {
-        &::placeholder {
-            color: #bad9f0;
+    input{
+        &::placeholder{
+            color:#bad9f0;
         }
     }
-    >* {
+    >*{
         display: inline-block;
         margin-right: 15px;
     }
-    .gamename,
-    .gamename_type {
+    .gamename,.gamename_type{
         width: 100px;
     }
-    .memberaccount {
-        .inputout {
+    .memberaccount{
+        .inputout{
             display: inline;
         }
     }
-    .lotterynumber_search {
-        >* {
+    .lotterynumber_search{
+        >*{
             display: inline-block;
             margin-right: 15px;
             vertical-align: middle;
         }
+        
     }
-    .exportout {
+    .exportout{
         float: right;
-        >* {
+        >*{
             float: left;
         }
-        i {
+        i{
             margin-top: 1px;
         }
     }
-    .prepageout {
-        i {
+    .prepageout{
+        float: right;
+        >*{
+            float: left;
+        }
+        i{
             margin-top: 1px;
         }
     }
 }
-
-.searchbtn {
+.searchbtn{
     width: 65px;
-    height: 36px;
-    color: #fff;
+    height: 30px;
+    color:#fff;
     background: #3e8ef0;
-    line-height: 36px;
+    line-height: 30px;
     text-align: center;
     cursor: pointer;
     vertical-align: middle;
     padding: 0 5px;
     font-size: 14px;
-    i {
-        color: #fff;
+    i{
+        color:#fff;
         margin-right: 10px;
         position: relative;
         top: 1px;
     }
 }
-
-.export {
+.export{
     width: 105px;
     height: 30px;
-    color: #fff;
+    color:#fff;
     background: #26bd7b;
     line-height: 30px;
     text-align: center;
@@ -468,58 +432,56 @@ body {
     vertical-align: middle;
     padding: 0 5px;
     font-size: 14px;
-    i {
-        color: #fff;
+    i{
+        color:#fff;
         margin-right: 10px;
         position: relative;
         top: 1px;
     }
 }
-
-.prepage {
+.prepage{
     width: 105px;
-    height: 36px;
-    color: #fff;
+    height: 30px;
+    color:#fff;
     background: #3e8ef0;
-    line-height: 36px;
+    line-height: 30px;
     text-align: center;
     cursor: pointer;
     vertical-align: middle;
     padding: 0 5px;
     font-size: 14px;
-    i {
-        color: #fff;
+    i{
+        color:#fff;
         margin-right: 10px;
         position: relative;
         top: 1px;
     }
 }
-
-.realtimepage_table {
+.realtimepage_table{
     margin: 10px 0;
     background: #fff;
     overflow: hidden;
     clear: both;
-    .searchpagebar {
+    .searchpagebar{
         overflow: hidden;
         float: right;
         line-height: 45px;
         padding-right: 45px;
-        >* {
+        >*{
             float: left;
         }
-        .turnpage {
+        .turnpage{
             overflow: hidden;
-            >* {
+            >*{
                 float: left;
                 margin: 0 5px;
             }
-            input {
+            input{
                 text-align: center;
                 width: 35px;
                 height: 20px;
             }
-            .turnpagebtn {
+            .turnpagebtn{
                 width: 25px;
                 height: 20px;
                 border: 1px solid #3e8ef0;
@@ -527,35 +489,33 @@ body {
                 margin-top: 13px;
                 text-align: center;
                 cursor: pointer;
-                @include css3(transition,
-                all .2s ease);
-                &:hover {
+                @include css3(transition,all .2s ease);
+                &:hover{
                     background: #3e8ef0;
-                    i {
+                    i{
                         color: #fff;
                     }
                 }
             }
-            .turnpageleft {
+            .turnpageleft{
                 margin-right: 30px;
             }
-            .turnpageright {
+            .turnpageright{
                 margin-left: 30px;
             }
-            .turnpagetxt {
-                @include css3(transition,
-                all .2s ease);
+            .turnpagetxt{
+                @include css3(transition,all .2s ease);
                 cursor: pointer;
-                &:hover {
+                &:hover{
                     color: #3e8ef0;
                 }
             }
         }
-        .allpage {
+        .allpage{
             margin-right: 20px;
         }
-        .mouchline {
-            select {
+        .mouchline{
+            select{
                 margin-left: 10px;
                 padding-left: 10px;
                 min-width: 55px;
@@ -568,112 +528,106 @@ body {
         }
     }
 }
-
-.tablestyle {
-    table {
+.tablestyle{
+    table{
         margin: 0 auto;
         border-collapse: separate;
         border-spacing: 0px!important;
         width: 100%;
-        tr {
-            @include css3(transition,
-            all .2s ease);
-            &:not(:first-child) {
-                &:hover {
+        tr{
+            @include css3(transition,all .2s ease);
+            &:not(:first-child){
+                &:hover{
                     background: #efefef!important;
                 }
             }
-            &:nth-child(odd) {
+            &:nth-child(odd){
                 background-color: #f7f7f7;
             }
-            &:first-child {
-                td {
-                    color: #12396b;
+            &:first-child{
+                td{
+                    color:#12396b;
                     @include midtext();
                 }
             }
-            td {
+            td{
                 text-align: center;
                 padding: 0 5px;
                 vertical-align: middle;
-                color: #666666;
+                color:#666666;
                 line-height: 44px;
-                .displaycheck_out {}
-                label {
+                .displaycheck_out{
+                }
+                label{
                     cursor: pointer;
                 }
-                input {
+                input{
                     text-align: center;
                 }
-                .inputs {
+                .inputs{
                     width: 40px;
                 }
             }
-            .red {
-                color: #f68622;
+            .red{
+                color:#f68622;
             }
-            .green {
-                color: #26bd7b;
+            .green{
+                color:#26bd7b;
             }
-            .bule {
-                color: #3e8ef0;
+            .bule{
+                color:#3e8ef0;
             }
-            .tablelink {
-                color: #3e8ef0;
+            .tablelink{
+                color:#3e8ef0;
                 cursor: pointer;
-                &:hover {
-                    color: #3576c5;
+                &:hover{
+                    color:#3576c5;
                 }
             }
-            a {
-                color: #3e8ef0;
-                &:hover {
-                    color: #3576c5;
+            a{
+                color:#3e8ef0;
+                &:hover{
+                    color:#3576c5;
                 }
             }
         }
     }
 }
-
-.bottomnote {
+.bottomnote{
     @include midtext();
     margin-top: 30px;
 }
 
-
 /*datepicker*/
-
-.datepickerout {
-    .datepicker {
+.datepickerout{
+    .datepicker{
         width: 280px;
-        &:focus {
+        &:focus{
             outline-offset: 0px;
             outline: none;
         }
-        i {
+        i{
             font-size: 18px;
         }
     }
-    >i {
+    >i{
         font-size: 20px;
         right: 5px;
-        top: 0;
+        top:0;
     }
 }
-
-.datepickerout_active {
-    input {
+.datepickerout_active{
+    input{
         background: #d2e9fb;
         border: 1px solid #d2e9fb;
     }
-    .datebox {
+    .datebox{
         opacity: 1;
         height: 300px;
-        visibility: visible;
+        visibility:visible;
     }
 }
-
-.datebox {
+.datebox{
     position: absolute;
     @include cssbox-shadow();
     background: #fff;
@@ -681,72 +635,69 @@ body {
     width: 480px;
     height: 300px;
     z-index: 11;
-    @include css3(transition,
-    all .2s ease);
+    @include css3(transition,all .2s ease);
     opacity: 0;
     height: 0;
-    visibility: hidden;
-    .month_one {
+    visibility:hidden;
+    .month_one{
         padding-right: 14px;
     }
-    .month {
+    .month{
         width: calc(50% - 7px);
         float: left;
         position: relative;
         height: 100%;
-        >.month_year,
-        .daybox {
+        >.month_year,.daybox{
             padding: 0 5px;
         }
-        .month_year {
+        .month_year{
             text-align: center;
             height: 30px;
             margin-top: 5px;
-            i {
+            i{
                 font-size: 30px;
                 cursor: pointer;
             }
-            i.icon-chevron-left {
+            i.icon-chevron-left{
                 float: left;
             }
-            i.icon-chevron-right {
+            i.icon-chevron-right{
                 float: right;
             }
         }
-        .daybox {
-            .week {
-                color: #999999;
+        .daybox{
+            .week{
+                color:#999999;
             }
-            .day {
-                li {
-                    &:not(.block) {
+            .day{
+                li{
+                    &:not(.block){
                         cursor: pointer;
-                        &:hover {
+                        &:hover{
                             background: #3e8ef0;
-                            color: #fff;
+                            color:#fff;
                         }
                     }
                 }
-                .active {
+                .active{
                     background: #3e8ef0;
-                    color: #fff;
+                    color:#fff;
                 }
             }
-            ul {
+            ul{
                 overflow: hidden;
                 color: #262626;
-                li {
+                li{
                     float: left;
                     width: calc(100% / 7);
                     height: 30px;
                     text-align: center;
                     font-size: 12px;
-                    @include css3(transition,
-                    all .2s ease);
+                    @include css3(transition,all .2s ease);
                 }
             }
         }
-        .time {
+        .time{
             background: #f7f7f7;
             position: absolute;
             bottom: 10px;
@@ -754,10 +705,10 @@ body {
             line-height: 30px;
             vertical-align: middle;
             padding-left: 15px;
-            .timepickinput {
+            .timepickinput{
                 display: inline;
             }
-            input {
+            input{
                 width: 20px;
                 height: 20px;
                 padding: 0 5px;
@@ -765,50 +716,48 @@ body {
                 background: #fff;
                 text-align: center;
                 vertical-align: 2px;
-                &:focus {
-                    ~.timepickbox {
+                &:focus{
+                    ~.timepickbox{
                         opacity: 1;
                         visibility: visible;
                     }
                 }
             }
-            .button {
+            .button{
                 width: 15px;
                 height: 22px;
                 position: absolute;
                 top: 4px;
                 left: 190px;
-                >div {
+                >div{
                     width: 15px;
                     height: 9px;
                     background: #d2e9fb;
                     cursor: pointer;
                     position: absolute;
                     overflow: hidden;
-                    @include css3(transition,
-                    all .2s ease);
-                    &:active {
+                    @include css3(transition,all .2s ease);
+                    &:active{
                         background: #3e8ef0;
-                        i {
+                        i{
                             color: #fff;
                         }
                     }
-                    i {
+                    i{
                         top: -3px;
                         position: absolute;
                         font-size: 15px;
                     }
                 }
-                .up {
-                    top: 0;
-                    @include css3(transform,
-                    rotate(-180deg));
+                .up{
+                    top:0;
+                    @include css3(transform,rotate(-180deg));
                 }
-                .down {
-                    bottom: 0;
+                .down{
+                    bottom:0;
                 }
             }
-            .timepickbox {
+            .timepickbox{
                 position: absolute;
                 overflow: hidden;
                 width: 200px;
@@ -817,131 +766,121 @@ body {
                 padding: 7px;
                 opacity: 0;
                 visibility: hidden;
-                @include css3(transition,
-                all .2s ease);
-                li {
+                @include css3(transition,all .2s ease);
+                li{
                     float: left;
                     cursor: pointer;
                     width: calc(100% / 6);
                     text-align: center;
-                    @include css3(transition,
-                    all .2s ease);
-                    &:hover {
+                    @include css3(transition,all .2s ease);
+                    &:hover{
                         background: #3e8ef0;
-                        color: #fff;
+                        color:#fff;
                     }
                 }
-                .active {
+                .active{
                     background: #3e8ef0;
-                    color: #fff;
+                    color:#fff;
                 }
             }
         }
     }
 }
-
-.contentboxout {
+.contentboxout{
     background: #fff;
     position: relative;
     top: 10px;
 }
-
-
 /*alertbox*/
-
-.alertboxout {
+.alertboxout{
     min-height: 530px;
-    .alertbox {
+    .alertbox{
         width: 650px;
         height: 260px;
         margin: 0 auto;
         overflow: hidden;
         padding-top: 110px;
-        >div {
+        >div{
             float: left;
         }
-        .alertimg {
+        .alertimg{
             width: 235px;
-            img {
+            img{
                 width: 100%;
                 vertical-align: middle;
             }
         }
-        .alerttxt {
+        .alerttxt{
             //width: calc(100% - 235px);
             margin-top: 130px;
             font-size: 18px;
             color: #9b9a9a;
         }
-        .alertonlytxt {
+        .alertonlytxt{
             width: 100%;
             text-align: center;
         }
     }
-    .alertboxbtn {
+    .alertboxbtn{
         width: 215px;
         height: 50px;
-        color: #fff;
+        color:#fff;
         text-align: center;
         margin: 0 auto;
         background: #3e8ef0;
         font-size: 18px;
         line-height: 50px;
         cursor: pointer;
-        @include css3(transition,
-        all .2s ease);
-        &:hover {
+        @include css3(transition,all .2s ease);
+        &:hover{
             background: #59a4ff;
         }
     }
 }
-
-.alert_loading {
-    .alertbox {
-        >div {
-            float: none;
+.alert_loading{
+    .alertbox{
+            >div{
+        float: none;
         }
-        .alertimg {
+        .alertimg{
             width: 80px;
             margin: 0 auto;
             margin-top: 100px;
         }
-        .alerttxt {
+        .alerttxt{
             margin-top: 0px;
             text-align: center;
         }
     }
+
 }
 
 
 /*reportpage*/
-
-#reportpage {
-    .searchline {
+#reportpage{
+    .searchline{
         overflow: initial;
-        height: 38px;
-        line-height: 38px;
+        height: 30px;
     }
 }
 
 
-/*moreplantbtn*/
 
-.moreplantbtn_out {
+/*moreplantbtn*/
+.moreplantbtn_out{
     position: relative;
-    .moreplantbtn {
+    .moreplantbtn{
         background: #3e8ef0;
         color: #fff;
-        height: 36px;
-        line-height: 36px;
+        line-height: 30px;
         padding: 0 10px;
         cursor: pointer;
     }
-    .plantbox_active {
+    .plantbox_active{
         opacity: 1!important;
         visibility: visible!important;
     }
-    .plantbox {
+    .plantbox{
         position: absolute;
         top: 40px;
         overflow: hidden;
@@ -950,119 +889,106 @@ body {
         z-index: 10;
         background: #fff;
         padding: 20px;
-        @include css3(transition,
-        all .2s ease);
+        @include css3(transition,all .2s ease);
         opacity: 0;
         visibility: hidden;
-        .plantctrl {
+        .plantctrl{
             display: flex;
-            @include css3(flex-wrap,
-            wrap);
+            @include css3(flex-wrap,wrap);
             font-size: 12px;
             margin: 0 -5px 12px -5px;
-            li {
+            li{
                 text-align: center;
                 cursor: pointer;
                 margin: 0 5px 5px 5px;
                 padding: 0 5px;
-                @include css3(flex-shrink,
-                1);
-                @include css3(flex-grow,
-                1);
+                @include css3(flex-shrink,1);
+                @include css3(flex-grow,1);
                 flex-grow: 1;
                 -webkit-flex-grow: 1;
                 max-width: 100px;
             }
-            .lottery_class {
+            .lottery_class{
                 color: #3e8ef0;
                 border: 1px solid #3e8ef0;
-                @include css3(transition,
-                all .2s ease);
-                &:hover {
+                @include css3(transition,all .2s ease);
+                &:hover{
                     background: #3e8ef0;
-                    color: #fff;
+                    color:#fff;
                 }
             }
-            .active {
+            .active{
                 background: #3e8ef0;
-                color: #fff;
+                color:#fff;
             }
-            .ctrlbtn {
-                @include css3(flex-grow,
-                1);
+            .ctrlbtn{
+                @include css3(flex-grow,1);
                 max-width: 100px;
-                i {
+                i{
                     color: #fff;
                     font-size: 18px;
                     vertical-align: -3px;
                     margin-right: 5px;
                 }
             }
-            .lottery_delete {
-                height: 38px;
-                line-height: 38px;
+            .lottery_delete{
                 background: #26bd7b;
-                color: #fff;
+                color:#fff;
             }
-            .lottery_chose {
-                height: 38px;
-                line-height: 38px;
+            .lottery_chose{
                 background: #f09e3e;
-                color: #fff;
-                i {
+                color:#fff;
+                i{
                     font-size: 22px;
                     vertical-align: -5px;
                 }
             }
         }
-        .table_plant {
+        .table_plant{
             border: 1px solid #d2d2d2;
-            tr {
-                td {
+            tr{
+                td{
                     line-height: 30px;
                     font-size: 15px;
                     border-left: 1px solid #d2d2d2;
-                    color: #323232;
-                    &:first-child {
+                    color:#323232;
+                    &:first-child{
                         border-left: 0px solid #d2d2d2;
                         text-align: left;
                         padding-left: 10px;
                         cursor: pointer;
-                        i {
+                        i{
                             margin-right: 5px;
                         }
                     }
-                    i {
+                    i{
                         font-size: 20px;
-                        color: #afafaf;
+                        color:#afafaf;
                         vertical-align: middle;
                         vertical-align: -3px;
-                        @include css3(transition,
-                        all .2s ease);
+                        @include css3(transition,all .2s ease);
                     }
-                    .active {
+                    .active{
                         color: #3e8ef0;
                     }
-                    .icon-check_circle {
+                    .icon-check_circle{
                         cursor: pointer;
                     }
                 }
             }
+            
         }
     }
 }
-
-
 /*gash_companypage*/
-
-#gash_companypage {
-    .searchlistline {
+#gash_companypage{
+    .searchlistline{
         margin: 27px 0 17px 0;
     }
-    .tablestyle {
-        tr {
-            td {
-                .inputs {
+    .tablestyle{
+        tr{
+            td{
+                .inputs{
                     margin-left: 5px;
                     margin-right: 25px;
                 }
@@ -1070,27 +996,26 @@ body {
         }
     }
 }
-
-#newseditpage {
-    .linebtn {
+#newseditpage{
+    .linebtn{
         min-width: 120px;
     }
-    .tablestyle {
-        tr {
-            td {
-                input[type="radio"] {
-                    ~.radiostyle {
+    .tablestyle{
+        tr{
+            td{
+                input[type="radio"]{
+                    ~.radiostyle{
                         margin-left: 10px;
                     }
                 }
-                .inputs {
+                .inputs{
                     margin-left: 5px;
                 }
-                .tdpayicon {
+                .tdpayicon{
                     width: 30px;
                     vertical-align: middle;
                 }
-                .ctrlbtn {
+                .ctrlbtn{
                     float: left;
                     width: 40px;
                     min-width: auto;
@@ -1102,31 +1027,27 @@ body {
         }
     }
 }
-
-
 /*outbox*/
-
-.outboxout {
+.outboxout{
     width: 100%;
     height: 100vh;
     position: fixed;
     z-index: 10;
     display: none;
-    .outbg {
+    .outbg{
         background: rgba(0, 0, 0, .5);
         height: 100%;
         display: -webkit-flex;
         display: flex;
         align-items: center;
         -webkit-align-items: center;
-        .outbox {
+        .outbox{
             width: 480px;
             margin: 0 auto;
             background: #fff;
-            @include css3(border-radius,
-            3px);
+            @include css3(border-radius,3px);
             overflow: hidden;
-            .outbox_header {
+            .outbox_header{
                 color: #12396b;
                 background: #bad8f0;
                 font-size: 18px;
@@ -1134,61 +1055,59 @@ body {
                 text-align: center;
                 line-height: 53px;
             }
-            .outbox_content {
+            .outbox_content{
                 padding: 15px 10px;
-                .outboxtable {
+                .outboxtable{
                     width: 100%;
                     //border-spacing: 5px;
-                    td {
-                        span {
+                    td{
+                        span{
                             color: #fd2442;
                             margin-right: 10px;
                         }
-                        .web_type {
+                        .web_type{
                             float: left;
                             width: 80px;
-                            @include css3(box-shadow,
-                            none);
+                            @include css3(box-shadow,none);
                             border: 1px solid #bad9f0;
                         }
-                        .web_input {
+                        .web_input{
                             float: left;
                             width: calc(100% - 102px);
                         }
-                        input {
-                            width: calc(100% - 23px);
+                        input{
+                            width:  calc(100% - 23px);
                         }
-                        &:first-child {
+                        &:first-child{
                             text-align: right;
                             width: 80px;
                             padding-right: 10px;
                         }
                     }
                 }
-                .outbox_picalert {
+                .outbox_picalert{
                     padding: 15px 0;
                     width: 350px;
                     margin: 0 auto;
                     display: -webkit-flex;
                     display: flex;
-                    >* {
+                    >*{
                         flex-grow: 1;
                     }
-                    .picalert_updatepic {
+                    .picalert_updatepic{
                         width: 165px;
                     }
-                    .picalert_txt {
+                    .picalert_txt{
                         padding-left: 10px;
                         line-height: 25px;
                     }
-                    .uppicbox {
+                    .uppicbox{
                         color: #bad9f0;
                         width: 90px;
                         height: 90px;
                         background: #eff4f8;
                         border: 1px dashed #bad9f0;
-                        @include css3(border-radius,
-                        4px);
+                        @include css3(border-radius,4px);
                         text-align: center;
                         display: -webkit-flex;
                         display: flex;
@@ -1198,13 +1117,13 @@ body {
                         -ms-flex-pack: center;
                         justify-content: center;
                     }
-                    .chosepic {
+                    .chosepic{
                         width: 82px;
                         min-width: auto;
                         margin-top: 15px;
                     }
                 }
-                .outbox_ctrl {
+                .outbox_ctrl{
                     width: 350px;
                     margin: 0 auto;
                     display: -webkit-flex;
@@ -1212,7 +1131,7 @@ body {
                     -webkit-justify-content: space-between;
                     -ms-flex-pack: justify;
                     justify-content: space-between;
-                    >* {
+                    >*{
                         flex-grow: 1;
                         max-width: 115px;
                         height: 35px;
@@ -1222,9 +1141,9 @@ body {
             }
         }
     }
-    input {
-        &::placeholder {
-            color: #bad9f0;
+    input{
+        &::placeholder{
+            color:#bad9f0;
         }
     }
 }
